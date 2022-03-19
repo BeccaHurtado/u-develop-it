@@ -21,7 +21,7 @@ const db = mysql.createConnection(
 );
 
 // get all candidates
-app.get('api/candidates', (req, res) => {
+app.get('/api/candidates', (req, res) => {
     const sql = `SELECT * FROM candidates`;
 
     db.query(sql, (err, rows) => {
